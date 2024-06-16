@@ -1,0 +1,179 @@
+/* Some CSS styling */
+
+#sketchpadapp {
+  /* Prevent nearby text being highlighted when accidentally dragging mouse outside confines of the canvas */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#clear_button {
+  margin-left: 15px;
+  font-weight: bold;
+  color: #6A0572; /* Change text color to a darker purple */
+  border: solid 5px #6A0572;
+  border-radius: 15px;
+}
+
+#confidence {
+  font-style: italic; /* Make the text italic */
+  font-family: 'Pacifico', sans-serif;
+  margin-top: 7.5%;
+  color: #6A0572; /* Change text color to a darker purple */
+}
+
+#content {
+  margin: 0 auto;
+  padding: 3% 15%;
+  padding-bottom: 0;
+}
+
+#footer {
+  text-align: center;
+  background-color: black; /* Change background color to black */
+  color: #6A0572; /* Change text color to a darker purple */
+  padding-top: 1%;
+  padding-bottom: 0%;
+}
+
+#predict_button {
+  margin-right: 15px;
+  color: #6A0572; /* Change text color to a darker purple */
+  font-weight: bold;
+  border: solid 5px #6A0572;
+  border-radius: 15px;
+}
+#upload_trigger{
+  margin-left: 25px;
+  color: #6A0572; /* Change text color to a darker purple */
+  font-weight: bold;
+  border: solid 5px #6A0572;
+  border-radius: 15px;
+}
+
+#prediction_heading {
+  font-style: italic; /* Make the text italic */
+  font-family: 'Pacifico', sans-serif; /* Use the Pacifico font for a stylish look */
+  margin-top: 7.5%;
+  color: #6A0572; /* Change text color to a darker purple */
+  font-size: 45px; /* Adjust the font size as needed */
+}
+
+
+
+#result {
+  font-family: 'Pacifico', cursive;
+  font-size: 5rem;
+  color: #6A0572; /* Change text color to a darker purple */
+}
+
+#sketchpad {
+  height: 250px;
+  width: 250px;
+  border: 2px solid #888;
+  border-radius: 4px;
+}
+
+#source {
+  padding: 0 100px;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+#title {
+  padding: 1.5% 15%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn {
+  font-size: 15px;
+  padding: 10px;
+  -webkit-appearance: none;
+  background: #eee;
+  border: 1px solid #6A0572; /* Change border color to a darker purple */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Add a class for the black and purple buttons */
+.btn-black-purple {
+  color: #6A0572; /* Change text color to a darker purple */
+  background-color: black; /* Change background color to black */
+}
+
+.buttons_div {
+  margin-bottom: 30px;
+}
+
+.heading {
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  display: inline;
+  color: #6A0572; /* Change text color to a darker purple */
+}
+
+.leftside {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 4%;
+}
+
+.predicted_answer {
+  text-align: center;
+  margin: 0 auto;
+  padding: 3% 5%;
+  padding-top: 0;
+}
+
+.responsive_img {
+  width: 75%;
+  height: 10vw;
+  object-fit: cover;
+}
+
+.social-media-icons {
+  margin: 10px 40px;
+}
+
+.source-column {
+  padding: 3% 2%;
+}
+
+.source-h2 {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+}
+
+hr {
+  border: dotted #6A0572 6px; /* Change border color to a darker purple */
+  border-bottom: none;
+  width: 4%;
+  margin: 50px auto;
+  margin-bottom: 100px;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #6A0572; /* Change link color to a darker purple */
+  text-decoration: none;
+}
+
+p {
+  font-family: 'Source Code Pro', monospace, sans-serif;
+  margin-top: 1%;
+  color: #6A0572; /* Change text color to a darker purple */
+}
+
+@media (min-width: 720px) {
+  .leftside {
+      padding-left: 10%;
+  }
+}

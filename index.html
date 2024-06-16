@@ -1,0 +1,105 @@
+<html>
+
+<head>
+  <title>Digit Recognition WebApp</title>
+  <link rel="icon" href="favicon1.png" type="image/x-icon">
+
+
+  <meta name="viewport" content="width=device-width">
+  <!-- GoogleFont -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Calistoga|Josefin+Sans:400,700|Pacifico&display=swap" rel="stylesheet">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/b3aed9cb07.js" crossorigin="anonymous"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+
+</head>
+
+<body onload="init()">
+
+ <!-- navbar start -->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Digit Delights</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/about.html">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ <!-- navbar end  -->
+   <section id="title">
+    <h1 class="heading">Handwritten Digit Recognition System</h1>
+    <p>As a developer, I meticulously curated and preprocessed a dataset of handwritten digits like MNIST. Leveraging a Convolutional Neural Network (CNN) model, I fine-tuned its architecture, compiled it with optimized parameters, and rigorously trained and validated it. The resulting model showcases high accuracy in recognizing handwritten digits, ready for seamless deployment and continual monitoring for real-world applicability.</p>
+  </section>
+
+  <section id="content">
+    <div id="sketchpadapp">
+
+      <div class="row">
+        <div class="leftside">
+
+          <div class="">
+            <canvas id="sketchpad" height="200" width="200">
+            </canvas>
+          </div>
+
+          <div class="buttons_div">
+            <button type="button" class="btn btn-outline-success" id="predict_button">Predict</button>
+            <button type="button" class="btn btn-outline-warning" id="clear_button">&nbsp Clear &nbsp</button>
+            <input type="file" id="upload_button" accept="image/*" style="display:none;">
+            <button type="button" class="btn btn-outline-primary" id="upload_trigger">Upload Image</button>
+          </div>
+        </div>
+
+        <div class="predicted_answer col-sm-6">
+          <h1 id="prediction_heading">Prediction</h1>
+          <h1 id="result">?</h1>
+          <p id="confidence">Confidence: -</p>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+
+  <div class="container-fluid p-0 bg-dark text-white">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-0 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+        <span class=" text-white">© 2024 Digit Delights, Inc</span>
+      </div> 
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex px-5">
+        <li class="ms-3 text-white px-3"><a href="https://www.snapchat.com/add/eshaazam41?invite_id=BQ8sFDqe&locale=en_PK&share_id=-y1YkwHtS1W4WPMxUJEQ7Q&sid=11b936daeb804fafb581e9b53ea8115a" target="_blank" style="color: white;"><i class="fab fa-snapchat fa-2x" style="color: white;"></i></a></li>
+        <li class="ms-3 text-white px-3"><a href="https://www.instagram.com/esha__azam?igsh=MTlmYXhld3kxczNvbA%3D%3D&utm_source=qr" target="_blank" style="color: white;"><i class="fab fa-2x fa-instagram" style="color: white;"></i></a></li>
+<li class="ms-3 text-white px-3"><a href="https://www.facebook.com/eshaazam741?mibextid=9R9pXO" target="_blank" style="color: white;"><i class="fab fa-2x fa-facebook" style="color: white;"></i></a></li>
+
+    </ul>
+    </footer>
+  </div> 
+
+  <script src="js/main.js" charset="utf-8"></script>
+
+</body>
+
+</html>
